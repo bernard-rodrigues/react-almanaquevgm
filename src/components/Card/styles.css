@@ -1,0 +1,22 @@
+.item{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    height: 16rem;
+    width: 70vw;
+    margin-top: 1.5rem;
+    background-color: #f9f9f9;
+    padding-right: 2rem;
+    transition: width 0.3s;
+}
+
+.item div{
+    max-width: 50vw;
+}
+
+.item:last-child{
+    margin-bottom: 5rem;
+}

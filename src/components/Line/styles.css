@@ -1,0 +1,5 @@
+.Line{
+    height: 5px;
+    width: 100%;
+    background-image: linear-gradient(to right, var(--degrade-from), var(--degrade-to));
+}

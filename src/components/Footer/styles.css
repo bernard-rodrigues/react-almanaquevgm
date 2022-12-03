@@ -1,0 +1,43 @@
+footer{
+    background-color: var(--preto);
+    color: var(--branco);
+    padding: 2rem 0;
+    display: flex;
+    gap: 5rem;
+}
+
+footer .logoContainer{
+    display: flex;
+    margin-left: 13.5vw;
+    gap: 1.2rem;
+}
+
+footer .logoContainer img{
+    height: 4rem;
+}
+
+footer .logoContainer p{
+    font-family: Arciform;
+    font-size: 1.5rem;
+}
+
+.social ul{
+    list-style-type: none;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+.social li{
+    margin-bottom: 0.75rem;
+}
+
+.social li:first-child{
+    font-weight: bold;
+}
+
+.social a{
+    color: var(--branco);
+}
+
+.social a:hover{
+    border-bottom: 1px solid var(--branco);
+}

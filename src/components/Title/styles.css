@@ -1,0 +1,17 @@
+.logoContainer{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logoContainer img{
+    height: 4rem;
+    width: auto;
+}
+
+.logoContainer h1{
+    font-family: Arciform;
+    font-weight: 500;
+    color: var(--branco);
+    font-size: 2rem;
+}

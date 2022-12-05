@@ -5,7 +5,7 @@ import { Footer } from '../../components/Footer'
 import { Header } from '../../components/Header'
 import { Line } from '../../components/Line'
 
-import './styles.css'
+import rssfeed from '../../../scripts/rssfeed.json'
 
 interface episodeData{
   img: string,
@@ -17,10 +17,9 @@ interface episodeData{
 
 export function Home() {
   const [episodeList, setEpisodeList] = useState<episodeData[]>([])
-  
+
   useEffect(() => {
-    
-    const RSS_URL = 'https://anchor.fm/s/3090da8c/podcast/rss'
+    const RSS_URL = rssfeed.url
 
     fetch(RSS_URL)
     .then(response => response.text())

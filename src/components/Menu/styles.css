@@ -7,7 +7,6 @@
 
 #menu ul{
     list-style-type: none;
-    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     display: flex;
     gap: 1.5rem;
     font-size: 1rem;

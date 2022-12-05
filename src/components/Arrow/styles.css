@@ -1,0 +1,12 @@
+#arrow{
+    position: fixed;
+    right: -5rem;
+    bottom: 2.5rem;
+    height: 3rem;
+    transition: right 1s, bottom 1s, filter 0.2s;
+}
+
+#arrow:hover{
+    cursor: pointer;
+    filter: brightness(90%);
+}

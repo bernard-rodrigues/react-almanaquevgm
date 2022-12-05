@@ -6,6 +6,9 @@ import { Header } from '../../components/Header'
 import { Line } from '../../components/Line'
 
 import rssfeed from '../../../scripts/rssfeed.json'
+import { Player } from '../../components/Player'
+import { Arrow } from '../../components/Arrow'
+import { PlayerContextProvider } from '../../contexts/PlayerContext'
 
 interface episodeData{
   img: string,
@@ -42,18 +45,23 @@ export function Home() {
   }, [])
   
   return (
-    <>
+    <PlayerContextProvider>
       <Header/>
       <Line/>
-      {episodeList.map(episode => <Card 
-        key={episode.audio} 
-        title={episode.title}
-        duration={episode.duration}
-        description={episode.description} 
-        imageUrl={episode.img}
-      />)}
+      <main>
+        {episodeList.map(episode => <Card 
+          key={episode.audio} 
+          title={episode.title}
+          duration={episode.duration}
+          description={episode.description} 
+          imageUrl={episode.img}
+          audio={episode.audio}
+        />)}
+        <Arrow />
+      </main>
       <Line />
       <Footer />
-    </>
+      <Player />
+    </PlayerContextProvider>
   )
 }

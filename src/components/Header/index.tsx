@@ -4,9 +4,9 @@ import './styles.css'
 
 export function Header(){
     return (
-        <div id="header">
+        <header id="header">
             <Title />
             <Menu />
-        </div>
+        </header>
     )
 }

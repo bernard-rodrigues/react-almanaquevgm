@@ -12,28 +12,47 @@ interface episodeData{
   title: string,
   duration: string, 
   description: string,
-  shortDescription: string,
   audio: string
 }
 
 export function Home() {
+  const [episodeList, setEpisodeList] = useState<episodeData[]>([])
   
   useEffect(() => {
-    fetch('https://anchor.fm/s/3090da8c/podcast/rss')
+    
+    const RSS_URL = 'https://anchor.fm/s/3090da8c/podcast/rss'
+
+    fetch(RSS_URL)
     .then(response => response.text())
     .then(str => new window.DOMParser().parseFromString(str, 'text/xml'))
     .then(data => {
-      let mydata = data
+
+      const items = data.querySelectorAll("item");
+
+      items.forEach(item => {
+
+        setEpisodeList(currentList => [...currentList, {
+          img: item.querySelector("image")?.getAttribute("href")!,
+          title: item.querySelector("title")?.textContent!,
+          duration: item.querySelector("duration")?.textContent!,
+          description: item.querySelector("description")?.textContent!,
+          audio:item.querySelector("enclosure")?.getAttribute('url')!
+        }])
+      })
     })
   }, [])
-  
-  const [episodeList, setEpisodeList] = useState([])
   
   return (
     <>
       <Header/>
       <Line/>
-      {episodeList.map(episode => <Card key="" title="" description="" imageUrl=""/>)}
+      {episodeList.map(episode => <Card 
+        key={episode.audio} 
+        title={episode.title}
+        duration={episode.duration}
+        description={episode.description} 
+        imageUrl={episode.img}
+      />)}
       <Line />
       <Footer />
     </>

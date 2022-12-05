@@ -8,15 +8,48 @@
     height: 16rem;
     width: 70vw;
     margin-top: 1.5rem;
-    background-color: #f9f9f9;
+    background-color: var(--branco-escuro);
     padding-right: 2rem;
-    transition: width 0.3s;
+    transition: width 0.3s, transform 0.3s;
+}
+
+.item:last-child{
+    margin-bottom: 5rem;
+}
+
+.item:hover{
+    transform: translateX(calc(-50% + 3px));
+    background-color: var(--branco);
 }
 
 .item div{
     max-width: 50vw;
 }
 
-.item:last-child{
-    margin-bottom: 5rem;
+.title{
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.description{
+    margin-bottom: 1.2rem;
+}
+
+.episodeOptions{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.playEpisode{
+    padding: 0.5rem;
+    background-color: var(--azul);
+    color: var(--branco);
+    border: none;
+    transition: background-color 0.2s;
+}
+
+.playEpisode:hover{
+    background-color: var(--azul-escuro);
+    cursor: pointer
 }

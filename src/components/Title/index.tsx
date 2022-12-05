@@ -1,5 +1,5 @@
 import './styles.css'
-import logo from '../../assets/Logo.png'
+import logo from '/Logo.png'
 
 export function Title(){
     return (

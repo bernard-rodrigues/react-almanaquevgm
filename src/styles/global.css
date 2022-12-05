@@ -5,6 +5,7 @@
     --degrade-from: #16e3e8;
     --degrade-to: #615ae8;
     --branco: #fefefe;
+    --branco-escuro: #efefef;
 }
 
 *{
@@ -28,7 +29,7 @@ a{
 }
 
 body{
-    background-image: url('../assets/pattern.svg'), linear-gradient(to bottom, var(--degrade-from), var(--degrade-to));
+    background-image: url('/pattern.svg'), linear-gradient(to bottom, var(--degrade-from), var(--degrade-to));
     background-repeat: repeat, no-repeat;
     background-size: 10%, 100%;
 }

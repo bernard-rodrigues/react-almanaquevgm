@@ -2,9 +2,7 @@ import { createContext, ReactNode, useContext, useState } from "react";
 
 interface Episode{
     title: string,
-    duration: number,
-    url: string,
-    img: string
+    url: string
 }
 
 interface PlayerContextData{
@@ -32,15 +30,15 @@ export function PlayerContextProvider({children}: PlayerContextProviderProps){
     }
 
     function togglePlay(){
-        setIsPlaying(!isPlaying)
+        setIsPlaying(!isPlaying);
     }
 
     function setPlayingState(state: boolean){
-        setIsPlaying(state)
+        setIsPlaying(state);
     }
 
     function clearPlayerState(){
-        setCurrentEpisode(null)
+        setCurrentEpisode(null);
     }
 
     return(
@@ -52,7 +50,6 @@ export function PlayerContextProvider({children}: PlayerContextProviderProps){
                 setPlayingState,
                 togglePlay,
                 clearPlayerState,
-
             }}
         >
             {children}

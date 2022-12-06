@@ -1,5 +1,6 @@
 import './styles.css'
 import { durationFormat } from '../../utils/durationFormat'
+import { usePlayer } from '../../contexts/PlayerContext'
 
 interface CardProps{
     title: string,
@@ -10,6 +11,8 @@ interface CardProps{
 }
 
 export function Card({title, description, imageUrl, duration, audio}: CardProps){
+    const { play } = usePlayer()
+    
     function shorter(description: string){
         let shortDescription: string
         if(description.split('\n')[0].length < 200){
@@ -19,10 +22,6 @@ export function Card({title, description, imageUrl, duration, audio}: CardProps)
         }
         return shortDescription;
     }
-
-    function playEpisode(audio: string){
-        console.log(audio)
-    }
     
     return(
         <div className="item">
@@ -31,7 +30,7 @@ export function Card({title, description, imageUrl, duration, audio}: CardProps)
                 <h3 className="title">{title} ({durationFormat(duration)})</h3>
                 <p className="description" dangerouslySetInnerHTML={{__html: shorter(description)}}></p>
                 <div className="episodeOptions">
-                    <button className="playEpisode" onClick={() => playEpisode(audio)}>Reproduzir</button>
+                    <button className="playEpisode" onClick={() => play({title: title, url: audio})}>Reproduzir</button>
                     <a href="#" className="leiaMais">Leia mais...</a>
                 </div>
             </div>

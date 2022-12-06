@@ -30,7 +30,7 @@ export function Card({title, description, imageUrl, duration, audio}: CardProps)
                 <h3 className="title">{title} ({durationFormat(duration)})</h3>
                 <p className="description" dangerouslySetInnerHTML={{__html: shorter(description)}}></p>
                 <div className="episodeOptions">
-                    <button className="playEpisode" onClick={() => play({title: title, url: audio})}>Reproduzir</button>
+                    <button className="playEpisode" onClick={() => play({title: title, url: audio, image: imageUrl})}>Reproduzir</button>
                     <a href="#" className="leiaMais">Leia mais...</a>
                 </div>
             </div>

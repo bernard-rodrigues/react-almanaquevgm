@@ -2,33 +2,90 @@
     font-family: Arciform;
     font-size: 1.1rem;
     position: fixed;
+    height: 5rem;
     bottom: 0;
     width: 100%;
     background-image: linear-gradient(to right, var(--degrade-from), var(--degrade-to));
     padding: 1rem 0 0.75rem 0;
     color: var(--branco);
-    transform: translateY(10rem);
+    transform: translateY(0);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:space-between;
     gap: 1rem;
     transition: transform 0.3s;
+}
+
+#player.hidden{
+    transform: translateY(10rem);
 }
 
 .info .timer{
     text-align: left;
 }
 
+.playerThumb{
+    height: 5.2rem;
+    width: auto;
+}
+
+.currentEpisode{
+    font-size: 1.1rem;
+    font-weight: 700;
+    width: 25vw;
+}
+
+.timer{
+    font-size: 1rem;
+}
+
+.slider{
+    display: flex;
+    width: 30vw;
+    gap: 0.75rem;
+}
+
+.btnsContainer{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .btns{
     display: flex;
     gap: 0.75rem;
     align-items: center;
-    margin-right: 0.5rem;
+    justify-content: center;
 }
+
 .btns img{
-    height: 1.75rem;
+    height: 2rem;
     width: auto;
+    transition: filter 0.2s;
+    cursor: pointer;
 }
+
+.btns img:hover{
+    filter: brightness(90%);
+}
+
 .backward{
     transform: rotate3d(0, 1, 0, 180deg);
+}
+
+.playerLeft{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+#x{
+    height: 2rem;
+    width: auto;
+    transform: translateX(-1rem);
+}
+
+#x:hover{
+    filter: brightness(90%);
+    cursor: pointer;
 }

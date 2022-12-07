@@ -11,6 +11,7 @@ export function Player(){
     const audioRef = useRef<HTMLAudioElement>(null);
 
     const [progress, setProgress] = useState(0);
+    const [volume, setVolume] = useState(100);
 
     const {
         currentEpisode,
@@ -56,11 +57,18 @@ export function Player(){
         }
     }
 
-    function handleSeek(amount: number){
-        if(audioRef.current != undefined){
+    function handleSeek(amount: number | number[]){
+        if(audioRef.current != undefined && typeof amount == 'number'){
             audioRef.current.currentTime = amount;
+            setProgress(amount)
         }
-        setProgress(amount)
+    }
+
+    function handleVolume(amount: number | number[]){
+        if(audioRef.current != undefined && typeof amount == 'number'){
+            audioRef.current.volume = amount/100;
+            setVolume(amount)
+        }
     }
     
     return(
@@ -71,10 +79,10 @@ export function Player(){
                     <div className="currentEpisode">{currentEpisode?.title}</div>
                 </div>
             </div>
-            <div className="btnsContainer">
+            <div className="btnsLeftContainer">
                 <div className="progress">    
                     <div className="slider">
-                        <span>{convertDurationToTimeString(progress)}</span>
+                        <span>{convertDurationToTimeString(Math.floor(progress))}</span>
                         <Slider 
                             max={audioRef.current?.duration}
                             value={progress}
@@ -101,7 +109,28 @@ export function Player(){
                     </div>
                 </div>
             </div>
-            <img id="x" src="/x.svg" alt="Fechar" onClick={toggleHidden}/>
+            <div className="btnsRightContainer">
+                <div className="volumeContainer">
+                    <span>{volume}</span>
+                    <Slider 
+                        max={100}
+                        value={volume}
+                        onChange={handleVolume}
+                        trackStyle={{backgroundColor: 'var(--degrade-from)'}}
+                        railStyle={{ backgroundColor: 'var(--azul-escuro)' }}
+                        handleStyle={{ borderColor: 'var(--preto)', borderWidth: 4 }}
+                    />
+                    <img className="volumeIcon"
+                        src={`
+                            ${volume == 0 ? '/volume-mute-fill.svg' : ''}
+                            ${volume > 0 && volume < 60 ? '/volume-down-fill.svg' : ''}
+                            ${volume >= 60 ? '/volume-up-fill.svg' : ''}    
+                        `}
+                        alt="Volume"
+                    />
+                </div>
+                <img id="x" src="/x.svg" alt="Fechar" onClick={toggleHidden}/>
+            </div>
             <audio 
                 src={currentEpisode?.url} 
                 ref={audioRef} 

@@ -45,7 +45,7 @@
     gap: 0.75rem;
 }
 
-.btnsContainer{
+.btnsLeftContainer{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -67,6 +67,22 @@
 
 .btns img:hover{
     filter: brightness(90%);
+}
+
+.btnsRightContainer{
+    display: flex;
+    gap: 2rem;
+}
+
+.volumeContainer{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 12vw;
+}
+
+.volumeIcon{
+    height: 1.25rem;
 }
 
 .backward{

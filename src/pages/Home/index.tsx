@@ -5,7 +5,6 @@ import { Footer } from '../../components/Footer'
 import { Header } from '../../components/Header'
 import { Line } from '../../components/Line'
 
-import rssfeed from '../../../scripts/rssfeed.json'
 import { Player } from '../../components/Player'
 import { Arrow } from '../../components/Arrow'
 import { PlayerContextProvider } from '../../contexts/PlayerContext'
@@ -22,7 +21,8 @@ export function Home() {
   const [episodeList, setEpisodeList] = useState<episodeData[]>([])
 
   useEffect(() => {
-    const RSS_URL = rssfeed.url
+
+    const RSS_URL = import.meta.env.VITE_RSS_URL
 
     fetch(RSS_URL)
     .then(response => response.text())

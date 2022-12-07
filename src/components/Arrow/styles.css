@@ -6,6 +6,14 @@
     transition: right 1s, bottom 1s, filter 0.2s;
 }
 
+#arrow.showArrow{
+    right: 3rem;
+}
+
+#arrow.arrowUp{
+    bottom: 6rem;
+}
+
 #arrow:hover{
     cursor: pointer;
     filter: brightness(90%);

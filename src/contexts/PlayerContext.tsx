@@ -43,6 +43,7 @@ export function PlayerContextProvider({children}: PlayerContextProviderProps){
     }
 
     function clearPlayerState(){
+        setIsPlaying(false);
         setCurrentEpisode(null);
     }
 

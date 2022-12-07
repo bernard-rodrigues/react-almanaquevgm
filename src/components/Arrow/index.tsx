@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { usePlayer } from '../../contexts/PlayerContext'
 import './styles.css'
 
+import arrow from '/arrow-up-circle-fill.svg'
+
 export function Arrow(){
     const [showArrow, setShowArrow] = useState(false)
     
@@ -26,6 +28,6 @@ export function Arrow(){
     window.addEventListener('scroll', toggleArrow)
     
     return (
-        <img onClick={scrollToTop} id="arrow" className={`${isHidden ? "" : "arrowUp"} ${showArrow ? "showArrow" : ""}`} src="/arrow-up-circle-fill.svg" alt="Voltar ao início"></img>
+        <img onClick={scrollToTop} id="arrow" className={`${isHidden ? "" : "arrowUp"} ${showArrow ? "showArrow" : ""}`} src={arrow} alt="Voltar ao início"></img>
     )
 }

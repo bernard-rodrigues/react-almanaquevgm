@@ -1,7 +1,8 @@
 import { usePlayer } from '../../contexts/PlayerContext'
 import { Social } from '../Social'
-import { Title } from '../Title'
 import './styles.css'
+
+import logoBranco from '/LogoBranco.png'
 
 export function Footer(){
     const { isHidden } = usePlayer()
@@ -9,7 +10,7 @@ export function Footer(){
     return(
         <footer className={ isHidden ? "" : "bigger" }>
             <div className="footerContainer">
-                <img src="/LogoBranco.png" alt="Logo Branco" />
+                <img src={logoBranco} alt="Logo Branco" />
                 <Social />
             </div>
         </footer>

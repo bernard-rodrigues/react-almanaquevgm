@@ -1,5 +1,15 @@
+@keyframes linemove{
+    from {background-position-x: 0;}
+    to {background-position: 100vw;}
+}
+
 .Line{
     height: 5px;
     width: 100%;
-    background-image: linear-gradient(to right, var(--degrade-from), var(--degrade-to));
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet, red);
+    background-repeat: repeat;
+    animation-name: linemove;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }

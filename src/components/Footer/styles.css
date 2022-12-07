@@ -1,24 +1,21 @@
 footer{
     background-color: var(--preto);
+}
+
+.footerContainer{
     color: var(--branco);
     padding: 2rem 0;
     display: flex;
     gap: 5rem;
+    width: 70vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-footer .logoContainer{
-    display: flex;
-    margin-left: 13.5vw;
-    gap: 1.2rem;
-}
-
-footer .logoContainer img{
-    height: 4rem;
-}
-
-footer .logoContainer p{
-    font-family: Arciform;
-    font-size: 1.5rem;
+footer img{
+    height: 8rem;
+    width: auto;
 }
 
 .bigger{

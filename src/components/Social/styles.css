@@ -1,3 +1,9 @@
+.social{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
 .social ul{
     list-style-type: none;
 }

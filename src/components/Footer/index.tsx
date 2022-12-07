@@ -8,8 +8,10 @@ export function Footer(){
     
     return(
         <footer className={ isHidden ? "" : "bigger" }>
-            <Title />
-            <Social />
+            <div className="footerContainer">
+                <img src="/LogoBranco.png" alt="Logo Branco" />
+                <Social />
+            </div>
         </footer>
     )
 }

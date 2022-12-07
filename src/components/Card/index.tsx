@@ -1,6 +1,7 @@
 import './styles.css'
 import { durationFormat } from '../../utils/durationFormat'
 import { usePlayer } from '../../contexts/PlayerContext'
+import { useNavigate } from 'react-router-dom'
 
 interface CardProps{
     title: string,
@@ -10,8 +11,14 @@ interface CardProps{
     audio: string
 }
 
-export function Card({title, description, imageUrl, duration, audio}: CardProps){
+export function Card(props: CardProps){
     const { play } = usePlayer()
+
+    const navigate = useNavigate()
+
+    function toLeiaMais(title: string){
+        navigate(`/leiamais/${title}`, {state: props})
+    }
     
     function shorter(description: string){
         let shortDescription: string
@@ -25,13 +32,13 @@ export function Card({title, description, imageUrl, duration, audio}: CardProps)
     
     return(
         <div className="item">
-            <img className="thumb" width="256" height="256" src={imageUrl} alt={title}/>
+            <img className="thumb" width="256" height="256" src={props.imageUrl} alt={props.title}/>
             <div>
-                <h3 className="title">{title} ({durationFormat(duration)})</h3>
-                <p className="description" dangerouslySetInnerHTML={{__html: shorter(description)}}></p>
+                <h3 className="title">{props.title} ({durationFormat(props.duration)})</h3>
+                <p className="description" dangerouslySetInnerHTML={{__html: shorter(props.description)}}></p>
                 <div className="episodeOptions">
-                    <button className="playEpisode" onClick={() => play({title: title, url: audio, image: imageUrl})}>Reproduzir</button>
-                    <a href="#" className="leiaMais">Leia mais...</a>
+                    <button className="playEpisode" onClick={() => play({title: props.title, url: props.audio, image: props.imageUrl})}>Reproduzir</button>
+                    <span className="leiaMais" onClick={()=>toLeiaMais(props.title)}>Leia mais...</span>
                 </div>
             </div>
         </div>

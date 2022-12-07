@@ -9,7 +9,7 @@
     background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet, red);
     background-repeat: repeat;
     animation-name: linemove;
-    animation-duration: 10s;
+    animation-duration: 30s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }

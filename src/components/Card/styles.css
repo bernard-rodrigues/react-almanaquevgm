@@ -22,12 +22,13 @@
     max-width: 50vw;
 }
 
-.item a{
+.leiaMais{
     color: var(--degrade-to);
 }
 
-.item a:hover{
+.leiaMais:hover{
     color: var(--azul-escuro);
+    cursor: pointer;
 }
 
 .title{

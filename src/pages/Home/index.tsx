@@ -4,10 +4,8 @@ import { Card } from '../../components/Card'
 import { Footer } from '../../components/Footer'
 import { Header } from '../../components/Header'
 import { Line } from '../../components/Line'
-
 import { Player } from '../../components/Player'
 import { Arrow } from '../../components/Arrow'
-import { PlayerContextProvider } from '../../contexts/PlayerContext'
 
 interface episodeData{
   img: string,
@@ -45,7 +43,7 @@ export function Home() {
   }, [])
   
   return (
-    <PlayerContextProvider>
+    <>  
       <Header/>
       <Line/>
       <main>
@@ -62,6 +60,6 @@ export function Home() {
       <Line />
       <Footer />
       <Player />
-    </PlayerContextProvider>
+    </>
   )
 }

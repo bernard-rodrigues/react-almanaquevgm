@@ -21,23 +21,6 @@ footer .logoContainer p{
     font-size: 1.5rem;
 }
 
-.social ul{
-    list-style-type: none;
-    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-}
-
-.social li{
-    margin-bottom: 0.75rem;
-}
-
-.social li:first-child{
-    font-weight: bold;
-}
-
-.social a{
-    color: var(--branco);
-}
-
-.social a:hover{
-    border-bottom: 1px solid var(--branco);
+.bigger{
+    margin-bottom: 5rem;
 }

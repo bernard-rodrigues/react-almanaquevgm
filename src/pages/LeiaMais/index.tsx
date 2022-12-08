@@ -1,7 +1,4 @@
 import { useEffect } from "react";
-import { Footer } from "../../components/Footer";
-import { Header } from "../../components/Header";
-import { Line } from "../../components/Line"
 import { usePlayer } from "../../contexts/PlayerContext";
 
 import { useLocation } from 'react-router-dom';
@@ -18,8 +15,6 @@ export function LeiaMais(){
     
     return(
         <>
-            <Header />
-            <Line />
             <EpisodeDetails 
                 title={location.state.title}
                 duration={location.state.duration}
@@ -27,8 +22,6 @@ export function LeiaMais(){
                 audio={location.state.audio}
                 imageUrl={location.state.imageUrl}
             />
-            <Line />
-            <Footer />
         </>
     )
 }

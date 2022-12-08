@@ -3,6 +3,8 @@ import { durationFormat } from '../../utils/durationFormat'
 import { usePlayer } from '../../contexts/PlayerContext'
 import { useNavigate } from 'react-router-dom'
 
+import playIcon from '/play-fill.svg'
+
 interface CardProps{
     title: string,
     duration: string,
@@ -18,6 +20,10 @@ export function Card(props: CardProps){
 
     function toLeiaMais(title: string){
         navigate(`/leiamais/${title}`, {state: props})
+        let rootElement = document.documentElement
+        rootElement.scrollTo({
+            top: 0,
+        })
     }
     
     function shorter(description: string){
@@ -37,7 +43,10 @@ export function Card(props: CardProps){
                 <h3 className="title">{props.title} ({durationFormat(props.duration)})</h3>
                 <p className="description" dangerouslySetInnerHTML={{__html: shorter(props.description)}}></p>
                 <div className="episodeOptions">
-                    <button className="playEpisode" onClick={() => play({title: props.title, url: props.audio, image: props.imageUrl})}>Reproduzir</button>
+                    <button className="playEpisode" onClick={() => play({title: props.title, url: props.audio, image: props.imageUrl})}>
+                        <span>Reproduzir</span>
+                        <img src={playIcon} alt="Play Icon" />
+                    </button>
                     <span className="leiaMais" onClick={()=>toLeiaMais(props.title)}>Leia mais...</span>
                 </div>
             </div>

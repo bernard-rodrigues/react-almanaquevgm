@@ -24,6 +24,7 @@
 
 .leiaMais{
     color: var(--degrade-to);
+    font-size: 1rem;
 }
 
 .leiaMais:hover{
@@ -47,14 +48,26 @@
 }
 
 .playEpisode{
-    padding: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
     background-color: var(--azul-escuro);
     color: var(--branco);
     border: none;
+    border-radius: 2px;
     transition: background-color 0.2s;
 }
 
 .playEpisode:hover{
     background-color: var(--azul);
     cursor: pointer
+}
+
+.playEpisode span{
+    transform: translateY(1px);
+}
+
+.playEpisode img{
+    height: 1.5rem;
 }

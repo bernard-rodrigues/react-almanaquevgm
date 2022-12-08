@@ -44,8 +44,6 @@ export function Home() {
   
   return (
     <>  
-      <Header/>
-      <Line/>
       <main>
         {episodeList.map(episode => <Card 
           key={episode.audio} 
@@ -55,11 +53,7 @@ export function Home() {
           imageUrl={episode.img}
           audio={episode.audio}
         />)}
-        <Arrow />
       </main>
-      <Line />
-      <Footer />
-      <Player />
     </>
   )
 }

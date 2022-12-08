@@ -1,13 +1,15 @@
 import './styles.css'
 import { durationFormat } from '../../utils/durationFormat'
+import { convertGMT } from '../../utils/convertGMTtoBR'
+
 import { usePlayer } from '../../contexts/PlayerContext'
 import { useNavigate } from 'react-router-dom'
 
-import { CardProps } from '../../types/types'
+import { episodeData } from '../../types/types'
 
 import playIcon from '/play-fill.svg'
 
-export function Card(props: CardProps){
+export function Card(props: episodeData){
     const { play } = usePlayer()
 
     const navigate = useNavigate()
@@ -32,12 +34,13 @@ export function Card(props: CardProps){
     
     return(
         <div className="item">
-            <img className="thumb" width="256" height="256" src={props.imageUrl} alt={props.title}/>
+            <img className="thumb" width="256" height="256" src={props.img} alt={props.title}/>
             <div>
                 <h3 className="title">{props.title} ({durationFormat(props.duration)})</h3>
+                <small className="pubDate">Publicação: {convertGMT(props.pubDate)}</small>
                 <p className="description" dangerouslySetInnerHTML={{__html: shorter(props.description)}}></p>
                 <div className="episodeOptions">
-                    <button className="playEpisode" onClick={() => play({title: props.title, url: props.audio, image: props.imageUrl})}>
+                    <button className="playEpisode" onClick={() => play({title: props.title, url: props.audio, image: props.img})}>
                         <span>Reproduzir</span>
                         <img src={playIcon} alt="Play Icon" />
                     </button>

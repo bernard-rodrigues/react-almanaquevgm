@@ -1,7 +1,8 @@
-export interface CardProps{
+export interface episodeData{
+    img: string,
     title: string,
-    duration: string,
+    pubDate: string,
+    duration: string, 
     description: string,
-    imageUrl: string,
     audio: string
 }

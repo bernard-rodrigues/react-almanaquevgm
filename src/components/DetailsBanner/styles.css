@@ -1,15 +1,14 @@
 .detailsBanner{
-    height: 32vw;
+    height: 13rem;
     width: 100%;
     background-size: 120% auto;
-    background-position: -18rem -40rem;
+    background-position: -3rem 7%;
 }
 
 .detailsBannerOverlay{
-    height: 32vw;
+    height: 13rem;
     width: 100%;
-    background-image: 
-        linear-gradient(to right, #ffffff00, #ffffffff 60rem);
+    background-image: linear-gradient(to right, #ffffffff, #ffffff00 80%);
     display: flex;
     justify-content: right;
     align-items: center;

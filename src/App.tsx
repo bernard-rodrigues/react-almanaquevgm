@@ -13,16 +13,18 @@ export function App(){
     return(
         <PlayerContextProvider>
             <BrowserRouter>
-            <Header />
-            <Line />
-                <Routes>
-                    <Route path='/' element={<Home />} />
-                    <Route path='/leiamais/:title' element={<LeiaMais />} />
-                </Routes>
-            <Arrow />
-            <Line />
-            <Footer />
-            <Player />
+                <Header />
+                <Line />
+                    <main>
+                        <Routes>
+                            <Route path='/' element={<Home />} />
+                            <Route path='/leiamais/:title' element={<LeiaMais />} />
+                        </Routes>
+                        <Arrow />
+                    </main>
+                <Line />
+                <Footer />
+                <Player />
             </BrowserRouter>
         </PlayerContextProvider>
     )

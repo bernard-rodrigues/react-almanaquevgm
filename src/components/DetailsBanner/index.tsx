@@ -1,14 +1,12 @@
-import { CardProps } from '../../types/types'
+import { episodeData } from '../../types/types'
 import './styles.css'
 
 
-export function DetailsBanner(props: CardProps){
+export function DetailsBanner(props: episodeData){
     return(
-        <div className="detailsBanner" style={{"backgroundImage": `url(${props.imageUrl})`}}>
+        <div className="detailsBanner" style={{"backgroundImage": `url(${props.img})`}}>
             <div className="detailsBannerOverlay">
-                <div className="bannerTitle">
-                    {props.title}
-                </div>
+                <div className="bannerTitle"></div>
             </div>
         </div>
     )

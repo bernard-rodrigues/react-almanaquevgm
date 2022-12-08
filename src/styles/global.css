@@ -6,6 +6,7 @@
     --degrade-to: #615ae8;
     --branco: #fefefe;
     --branco-escuro: #efefef;
+    --cinza: #666666;
 }
 
 *{
@@ -32,4 +33,8 @@ body{
     background-image: url('/pattern.svg'), linear-gradient(to bottom, var(--degrade-from), var(--degrade-to));
     background-repeat: repeat, no-repeat;
     background-size: 10%, 100%;
+}
+
+main{
+    min-height: 90vh;
 }

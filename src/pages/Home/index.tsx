@@ -1,19 +1,8 @@
 import { useEffect, useState } from 'react'
 
 import { Card } from '../../components/Card'
-import { Footer } from '../../components/Footer'
-import { Header } from '../../components/Header'
-import { Line } from '../../components/Line'
-import { Player } from '../../components/Player'
-import { Arrow } from '../../components/Arrow'
 
-interface episodeData{
-  img: string,
-  title: string,
-  duration: string, 
-  description: string,
-  audio: string
-}
+import { episodeData } from '../../types/types'
 
 export function Home() {
   const [episodeList, setEpisodeList] = useState<episodeData[]>([])
@@ -34,6 +23,7 @@ export function Home() {
         setEpisodeList(currentList => [...currentList, {
           img: item.querySelector("image")?.getAttribute("href")!,
           title: item.querySelector("title")?.textContent!,
+          pubDate: item.querySelector("pubDate")?.textContent!,
           duration: item.querySelector("duration")?.textContent!,
           description: item.querySelector("description")?.textContent!,
           audio:item.querySelector("enclosure")?.getAttribute('url')!
@@ -43,17 +33,16 @@ export function Home() {
   }, [])
   
   return (
-    <>  
-      <main>
-        {episodeList.map(episode => <Card 
-          key={episode.audio} 
-          title={episode.title}
-          duration={episode.duration}
-          description={episode.description} 
-          imageUrl={episode.img}
-          audio={episode.audio}
-        />)}
-      </main>
+    <>
+      {episodeList.map(episode => <Card 
+        key={episode.audio} 
+        title={episode.title}
+        duration={episode.duration}
+        pubDate={episode.pubDate}
+        description={episode.description} 
+        img={episode.img}
+        audio={episode.audio}
+      />)}
     </>
   )
 }

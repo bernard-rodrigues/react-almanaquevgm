@@ -1,0 +1,27 @@
+.bannerContainer{
+    height: 50vh;
+    width: 100%;
+    /* background-image: linear-gradient(to right, var(--preto), #000022, var(--preto)); */
+    background-color: var(--preto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@keyframes textFadeIn{
+    0% {content: "Olá, amantes da Vídeo Game Music!"; opacity: 0; font-size: 3rem;}
+    20% {content: "Olá, amantes da Vídeo Game Music!"; opacity: 1; font-size: 6rem;}
+    40% {content: "Olá, amantes da Vídeo Game Music!"; opacity: 0; font-size: 7rem;}
+    50% {content: ""; opacity: 0; font-size: 3rem;}
+    60% {content: "Bem-vindo(a)s ao Almanaque VGM!"; opacity: 0; font-size: 3rem;}
+    80% {content: "Bem-vindo(a)s ao Almanaque VGM!"; opacity: 1; font-size: 6rem;}
+    100% {content: "Bem-vindo(a)s ao Almanaque VGM!"; opacity: 0; font-size: 7rem;}
+}
+
+.bannerContainer span::before{
+    content: "";
+    color: var(--branco);
+    animation: 6s textFadeIn 10s linear infinite;
+}

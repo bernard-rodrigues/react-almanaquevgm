@@ -1,11 +1,13 @@
 .leiaMaisContainer{
     width: 70vw;
+    min-height: 50vh;
     background-color: var(--branco);
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     margin: 1.5rem 0;
     padding: 4rem 3rem 1rem 3rem;
+    border-radius: 5px;
 }
 
 .leiaMaisContainer p{

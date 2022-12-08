@@ -11,6 +11,7 @@
     background-color: var(--branco-escuro);
     padding-right: 2rem;
     transition: width 0.3s, transform 0.3s;
+    border-radius: 5px;
 }
 
 .item:hover{
@@ -20,6 +21,10 @@
 
 .item div{
     max-width: 50vw;
+}
+
+.thumb{
+    border-radius: 5px 0 0 5px;
 }
 
 .leiaMais{
@@ -61,7 +66,7 @@
     background-color: var(--azul-escuro);
     color: var(--branco);
     border: none;
-    border-radius: 2px;
+    border-radius: 5px;
     transition: background-color 0.2s;
 }
 

@@ -9,6 +9,10 @@
     width: auto;
 }
 
+.logoContainer:hover{
+    cursor: pointer;
+}
+
 .logoContainer h1{
     font-family: Arciform;
     font-weight: 500;

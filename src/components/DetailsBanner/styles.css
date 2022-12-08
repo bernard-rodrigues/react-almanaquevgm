@@ -1,0 +1,23 @@
+.detailsBanner{
+    height: 32vw;
+    width: 100%;
+    background-size: 120% auto;
+    background-position: -18rem -40rem;
+}
+
+.detailsBannerOverlay{
+    height: 32vw;
+    width: 100%;
+    background-image: 
+        linear-gradient(to right, #ffffff00, #ffffffff 60rem);
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.bannerTitle{
+    font-size: 4.5rem;
+    width: 40rem;
+    text-align: right;
+    margin-right: 5rem;
+}

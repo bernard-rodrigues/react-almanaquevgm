@@ -3,15 +3,9 @@ import { durationFormat } from '../../utils/durationFormat'
 import { usePlayer } from '../../contexts/PlayerContext'
 import { useNavigate } from 'react-router-dom'
 
-import playIcon from '/play-fill.svg'
+import { CardProps } from '../../types/types'
 
-interface CardProps{
-    title: string,
-    duration: string,
-    description: string,
-    imageUrl: string,
-    audio: string
-}
+import playIcon from '/play-fill.svg'
 
 export function Card(props: CardProps){
     const { play } = usePlayer()

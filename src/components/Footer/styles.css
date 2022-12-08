@@ -1,5 +1,6 @@
 footer{
     background-color: var(--preto);
+    padding-bottom: 0.5rem;
 }
 
 .footerContainer{
@@ -16,6 +17,18 @@ footer{
 footer img{
     height: 8rem;
     width: auto;
+}
+
+footer p{
+    color: var(--branco);
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+footer p a{
+    color: var(--branco);
+    font-size: 0.8rem;
+    font-weight: 700;
 }
 
 .bigger{

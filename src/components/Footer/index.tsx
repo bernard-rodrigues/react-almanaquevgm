@@ -13,6 +13,7 @@ export function Footer(){
                 <img src={logoBranco} alt="Logo Branco" />
                 <Social />
             </div>
+            <p>Criado por <a href="https://github.com/bernard-rodrigues" target="_blank">Bernard Rodrigues</a></p>
         </footer>
     )
 }

@@ -1,8 +1,6 @@
 #menu{
     position: absolute;
     right: 2rem;
-    opacity: 1;
-    transition: opacity 1s;
 }
 
 #menu ul{
@@ -26,4 +24,40 @@
 
 #menu a:hover::after{
     width: 100%;
+}
+
+@keyframes liStart{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+#menu li:nth-child(1){
+    opacity: 0;
+    animation: liStart linear 1s forwards;
+    animation-delay: 0.5s;
+}
+
+#menu li:nth-child(2){
+    opacity: 0;
+    animation: liStart linear 1s forwards;
+    animation-delay: 1s;
+}
+
+#menu li:nth-child(3){
+    opacity: 0;
+    animation: liStart linear 1s forwards;
+    animation-delay: 1.5s;
+}
+
+#menu li:nth-child(4){
+    opacity: 0;
+    animation: liStart linear 1s forwards;
+    animation-delay: 2s;
+}
+
+#menu li:nth-child(5){
+    opacity: 0;
+    animation: liStart linear 1s forwards;
+    animation-delay: 2.5s;
 }

@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { Banner } from '../../components/Banner'
 
 import { Card } from '../../components/Card'
 
@@ -35,7 +34,6 @@ export function Home() {
   
   return (
     <>
-      <Banner />
       {episodeList.map(episode => <Card 
         key={episode.audio} 
         title={episode.title}

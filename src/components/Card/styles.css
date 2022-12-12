@@ -1,64 +1,69 @@
-.item{
+.item {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 2rem;
     align-items: center;
-    height: 16rem;
+    height: 18rem;
     width: 70vw;
     margin: 1.5rem 0;
     background-color: var(--branco-escuro);
     padding-right: 2rem;
-    transition: width 0.3s, transform 0.3s;
     border-radius: 5px;
+    transition: width 0.3s, transform 0.3s, height 0.3s;
 }
 
-.item:hover{
+.item:hover {
     transform: translateX(calc(-50% + 3px));
     background-color: var(--branco);
 }
 
-.item div{
+.item div {
     max-width: 50vw;
 }
 
-.thumb{
+.thumb {
+    height: 100%;
+    width: auto;
     border-radius: 5px 0 0 5px;
 }
 
-.leiaMais{
+.leiaMais {
     color: var(--degrade-to);
     font-size: 1rem;
 }
 
-.leiaMais:hover{
+.leiaMais:hover {
     color: var(--azul-escuro);
     cursor: pointer;
 }
 
-.title{
+.title {
     margin-bottom: 0;
     font-size: 1.2rem;
 }
 
-.pubDate{
+.pubDate {
     font-size: 0.8rem;
     color: var(--cinza);
 
 }
 
-.description{
+.description,
+.description p,
+.description a {
     margin: 1.2rem 0;
+    font-size: 0.9rem;
 }
 
-.episodeOptions{
+.episodeOptions {
     display: flex;
     gap: 1rem;
     align-items: center;
 }
 
-.playEpisode{
+.playEpisode {
     display: flex;
     gap: 0.5rem;
     align-items: center;
@@ -70,15 +75,71 @@
     transition: background-color 0.2s;
 }
 
-.playEpisode:hover{
+.playEpisode:hover {
     background-color: var(--azul);
     cursor: pointer
 }
 
-.playEpisode span{
+.playEpisode span {
     transform: translateY(1px);
 }
 
-.playEpisode img{
+.playEpisode img {
     height: 1.5rem;
+}
+
+@media screen and (max-width: 991px){
+    .item{
+        height: 18rem;
+        width: 85vw;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .item{
+        height: 17rem;
+        width: 90vw;
+    }
+
+    .playEpisode{
+        padding: 0.25rem 0.25rem 0.25rem 0.5rem;
+        border-radius: 3px;
+    }
+}
+
+@media screen and (max-width: 599px){
+    .item {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        height: 12rem;
+        width: 90vw;
+        background-color: var(--branco-escuro);
+        padding-right: 1rem;
+        border-radius: 5px;
+        transition: width 0.3s, transform 0.3s, height 0.3s;
+    }
+
+    .item div{
+        max-width: 100%;
+        gap: 1rem;
+    }
+
+    .item div:last-child{
+        margin-top: 1rem;
+    }
+
+    .title{
+        font-size: 1.2rem;
+    }
+
+    .thumb{
+        height: 100%;
+    }
+
+    .description{
+        display: none;
+    }
 }

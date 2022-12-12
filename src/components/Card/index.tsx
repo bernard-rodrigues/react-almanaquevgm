@@ -34,7 +34,7 @@ export function Card(props: episodeData){
     
     return(
         <div className="item">
-            <img className="thumb" width="256" height="256" src={props.img} alt={props.title}/>
+            <img className="thumb" src={props.img} alt={props.title}/>
             <div>
                 <h3 className="title">{props.title} ({durationFormat(props.duration)})</h3>
                 <small className="pubDate">Publicação: {convertGMT(props.pubDate)}</small>

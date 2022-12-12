@@ -61,3 +61,10 @@
     animation: liStart linear 1s forwards;
     animation-delay: 2.5s;
 }
+
+@media screen and (max-width: 599px){
+    #menu ul{
+        flex-direction: column;
+        transform: translate(0, 7rem);
+    }
+}

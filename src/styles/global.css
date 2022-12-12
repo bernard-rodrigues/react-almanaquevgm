@@ -38,3 +38,27 @@ body{
 main{
     min-height: 90vh;
 }
+
+@media only screen and (max-width: 1199px){
+    *{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 991px){
+    *{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    *{
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 599px){
+    *{
+        font-size: 8px;
+    }
+}

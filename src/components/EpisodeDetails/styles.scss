@@ -1,0 +1,50 @@
+@use '../../styles/global';
+
+.leiaMaisContainer{
+    width: 70vw;
+    min-height: 50vh;
+    background-color: global.$branco;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 1.5rem 0;
+    padding: 4rem 3rem 1rem 3rem;
+    border-radius: 5px;
+    
+    p{
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    ul{
+        margin-left: 2rem;
+    }
+    
+    li{
+        font-size: 1.1rem;
+        
+        &:last-child{
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+.detailsTitleContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    
+    div{
+        text-align: left;
+    }
+    
+    h1{
+        font-size: 1.7rem;
+    }
+}
+
+.detailsPubDate{
+    color: global.$cinza;
+}

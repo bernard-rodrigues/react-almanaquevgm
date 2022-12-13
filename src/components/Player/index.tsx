@@ -5,7 +5,7 @@ import { convertDurationToTimeString } from '../../utils/convertDurationToTimeSt
 import Slider from 'rc-slider'
 import 'rc-slider/assets/index.css'
 
-import './styles.css'
+import './styles.scss'
 
 export function Player(){
     const audioRef = useRef<HTMLAudioElement>(null);
@@ -87,9 +87,9 @@ export function Player(){
                             max={audioRef.current?.duration}
                             value={progress}
                             onChange={handleSeek}
-                            trackStyle={{backgroundColor: 'var(--degrade-to)'}}
-                            railStyle={{ backgroundColor: 'var(--azul-escuro)' }}
-                            handleStyle={{ borderColor: 'var(--preto)', borderWidth: 4 }}
+                            trackStyle={{backgroundColor: '#615ae8'}}
+                            railStyle={{ backgroundColor: '#076579' }}
+                            handleStyle={{ borderColor: '#1d1d1b', borderWidth: 4 }}
                         />
                         <span>{audioRef.current?.duration ? convertDurationToTimeString(Math.floor(audioRef.current?.duration!)) : "00:00:00"}</span>
                     </div>
@@ -116,9 +116,9 @@ export function Player(){
                         max={100}
                         value={volume}
                         onChange={handleVolume}
-                        trackStyle={{backgroundColor: 'var(--degrade-from)'}}
-                        railStyle={{ backgroundColor: 'var(--azul-escuro)' }}
-                        handleStyle={{ borderColor: 'var(--preto)', borderWidth: 4 }}
+                        trackStyle={{backgroundColor: '#16e3e8'}}
+                        railStyle={{ backgroundColor: '#076579' }}
+                        handleStyle={{ borderColor: '#1d1d1b', borderWidth: 4 }}
                     />
                     <img className="volumeIcon"
                         src={`

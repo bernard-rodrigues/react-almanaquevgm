@@ -1,7 +1,7 @@
 import { usePlayer } from '../../contexts/PlayerContext'
 import { episodeData } from '../../types/types'
 import { convertGMT } from '../../utils/convertGMTtoBR'
-import './styles.css'
+import './styles.scss'
 
 import playIcon from '/play-fill.svg'
 

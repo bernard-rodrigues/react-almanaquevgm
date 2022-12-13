@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { usePlayer } from '../../contexts/PlayerContext'
-import './styles.css'
+import './styles.scss'
 
 import arrow from '/arrow-up-circle-fill.svg'
 

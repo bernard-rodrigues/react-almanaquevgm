@@ -1,6 +1,6 @@
 import { usePlayer } from '../../contexts/PlayerContext'
 import { Social } from '../Social'
-import './styles.css'
+import './styles.scss'
 
 import logoBranco from '/LogoBranco.png'
 

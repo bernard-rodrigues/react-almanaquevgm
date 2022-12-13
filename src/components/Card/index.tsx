@@ -1,4 +1,4 @@
-import './styles.css'
+import './styles.scss'
 import { durationFormat } from '../../utils/durationFormat'
 import { convertGMT } from '../../utils/convertGMTtoBR'
 

@@ -1,5 +1,5 @@
 import { episodeData } from '../../types/types'
-import './styles.css'
+import './styles.scss'
 
 
 export function DetailsBanner(props: episodeData){

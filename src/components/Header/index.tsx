@@ -1,6 +1,6 @@
 import { Menu } from '../Menu'
 import { Title } from '../Title'
-import './styles.css'
+import './styles.scss'
 
 export function Header(){
     return (

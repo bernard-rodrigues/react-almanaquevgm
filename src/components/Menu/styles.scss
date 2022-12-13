@@ -1,0 +1,69 @@
+@use '../../styles/global';
+
+#menu{
+    position: absolute;
+    right: 2rem;
+    
+    ul{
+        list-style-type: none;
+        display: flex;
+        gap: 2rem;
+    }
+    
+    a{
+        color: global.$branco;
+        
+        &::after{
+            content: '';
+            display: block;
+            width: 0;
+            height: 1px;
+            background: global.$branco;
+            transition: width .3s;
+        }
+
+        &:hover::after{
+            width: 100%;
+        }
+    }
+}
+
+@keyframes liStart{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+#menu li{
+    &:nth-child(1){
+        opacity: 0;
+        animation: liStart linear 1s forwards;
+        animation-delay: 0.5s;
+    }
+    &:nth-child(2){
+        opacity: 0;
+        animation: liStart linear 1s forwards;
+        animation-delay: 1s;
+    }
+    &:nth-child(3){
+        opacity: 0;
+        animation: liStart linear 1s forwards;
+        animation-delay: 1.5s;
+    }
+    &:nth-child(4){
+        opacity: 0;
+        animation: liStart linear 1s forwards;
+        animation-delay: 2s;
+    }
+    &:nth-child(5){
+        opacity: 0;
+        animation: liStart linear 1s forwards;
+        animation-delay: 2.5s;
+    }
+}
+
+@media screen and (max-width: 599px){
+    #menu ul{
+        flex-direction: column;
+        transform: translate(0, 7rem);
+    }
+}

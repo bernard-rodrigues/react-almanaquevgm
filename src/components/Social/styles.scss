@@ -1,0 +1,27 @@
+@use '../../styles/global';
+
+.social{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    
+    ul{
+        list-style-type: none;
+    }
+    
+    li{
+        margin-bottom: 0.75rem;
+        
+        &:first-child{
+            font-weight: bold;
+        }
+    }
+    
+    a{
+        color: global.$branco;
+        
+        &:hover{
+            border-bottom: 1px solid global.$branco;
+        }
+    }
+}

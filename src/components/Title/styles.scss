@@ -1,0 +1,25 @@
+@use '../../styles/global';
+
+.logoContainer{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    
+    &:hover{
+        cursor: pointer;
+    }
+
+    img{
+        height: 5rem;
+        width: auto;
+    }
+    
+    h1{
+        font-family: Arciform;
+        font-weight: 500;
+        color: global.$branco;
+        font-size: 2rem;
+    }
+}
+
+

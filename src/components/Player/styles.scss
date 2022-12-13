@@ -1,3 +1,5 @@
+@use '../../styles/global';
+
 #player{
     font-family: Arciform;
     font-size: 1.1rem;
@@ -5,22 +7,22 @@
     height: 5rem;
     bottom: 0;
     width: 100%;
-    background-image: linear-gradient(to right, var(--degrade-from), var(--degrade-to));
+    background-image: linear-gradient(to right, global.$degrade-from, global.$degrade-to);
     padding: 1rem 0 0.75rem 0;
-    color: var(--branco);
+    color: global.$branco;
     transform: translateY(0);
     display: flex;
     align-items: center;
     justify-content:space-between;
     gap: 1rem;
     transition: transform 0.3s;
+    
+    &.hidden{
+        transform: translateY(10rem);
+    }
 }
 
-#player.hidden{
-    transform: translateY(10rem);
-}
-
-.info .timer{
+.info.timer{
     text-align: left;
 }
 
@@ -56,17 +58,17 @@
     gap: 0.75rem;
     align-items: center;
     justify-content: center;
-}
-
-.btns img{
-    height: 2rem;
-    width: auto;
-    transition: filter 0.2s;
-    cursor: pointer;
-}
-
-.btns img:hover{
-    filter: brightness(90%);
+    
+    img{
+        height: 2rem;
+        width: auto;
+        transition: filter 0.2s;
+        cursor: pointer;
+        
+        &:hover{
+            filter: brightness(90%);
+        }
+    }
 }
 
 .btnsRightContainer{
@@ -99,9 +101,10 @@
     height: 2rem;
     width: auto;
     transform: translateX(-1rem);
-}
-
-#x:hover{
-    filter: brightness(90%);
-    cursor: pointer;
+    transition: filter 0.2s;
+    
+    &:hover{
+        filter: brightness(90%);
+        cursor: pointer;
+    }
 }

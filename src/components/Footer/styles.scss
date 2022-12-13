@@ -1,0 +1,38 @@
+@use '../../styles/global';
+
+footer{
+    background-color: global.$preto;
+    padding-bottom: 0.5rem;
+    
+    img{
+        height: 8rem;
+        width: auto;
+    }
+    
+    p{
+        color: global.$branco;
+        text-align: center;
+        font-size: 0.8rem;
+        
+        a{
+            color: global.$branco;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+    }
+}
+
+.footerContainer{
+    color: global.$branco;
+    padding: 2rem 0;
+    display: flex;
+    gap: 5rem;
+    width: 70vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bigger{
+    margin-bottom: 5rem;
+}

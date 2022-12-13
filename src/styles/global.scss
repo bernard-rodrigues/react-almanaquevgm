@@ -1,13 +1,12 @@
-:root{
-    --preto: #1d1d1b;
-    --azul: #00beff;
-    --azul-escuro: #076579;
-    --degrade-from: #16e3e8;
-    --degrade-to: #615ae8;
-    --branco: #fefefe;
-    --branco-escuro: #efefef;
-    --cinza: #666666;
-}
+$preto: #1d1d1b;
+$azul: #00beff;
+$azul-escuro: #076579;
+$degrade-from: #16e3e8;
+$degrade-to: #615ae8;
+$branco: #fefefe;
+$branco-escuro: #efefef;
+$cinza: #666666;
+
 
 *{
     margin: 0;
@@ -30,7 +29,7 @@ a{
 }
 
 body{
-    background-image: url('/pattern.svg'), linear-gradient(to bottom, var(--degrade-from), var(--degrade-to));
+    background-image: url('/pattern.svg'), linear-gradient(to bottom, $degrade-from, $degrade-to);
     background-repeat: repeat, no-repeat;
     background-size: 10%, 100%;
 }

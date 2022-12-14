@@ -1,5 +1,6 @@
 import { Home } from './pages/Home'
 import { LeiaMais } from './pages/LeiaMais'
+import { Apresentadores } from './pages/Apresentadores'
 
 import { BrowserRouter , Routes, Route } from 'react-router-dom'
 import { PlayerContextProvider } from './contexts/PlayerContext'
@@ -19,6 +20,7 @@ export function App(){
                         <Routes>
                             <Route path='/' element={<Home />} />
                             <Route path='/leiamais/:title' element={<LeiaMais />} />
+                            <Route path='/apresentadores' element={<Apresentadores />} />
                         </Routes>
                         <Arrow />
                     </main>
